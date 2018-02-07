@@ -1,0 +1,17 @@
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\bin\Debug\LorelaiBoutique.exe.config
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\bin\Debug\LorelaiBoutique.exe
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\bin\Debug\LorelaiBoutique.pdb
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.csprojResolveAssemblyReference.cache
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.Form1.resources
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.Properties.Resources.resources
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.csproj.GenerateResource.Cache
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.csproj.CoreCompileInputs.cache
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.exe
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.pdb
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.Categorii.resources
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.Produse.resources
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.Update_Categorii.resources
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.Update_Produse.resources
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.ClearProduse.resources
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\bin\Debug\MySql.Data.dll
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.ClearCategorii.resources

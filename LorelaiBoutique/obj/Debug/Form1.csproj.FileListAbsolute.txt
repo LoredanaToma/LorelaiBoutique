@@ -1,0 +1,7 @@
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.Add_Categorii.resources
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.Form1.resources
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.Properties.Resources.resources
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\Form1.csproj.GenerateResource.Cache
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\Form1.csproj.CoreCompileInputs.cache
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.exe
+E:\anul2-sem1\c#\lorelai\LorelaiBoutique\LorelaiBoutique\obj\Debug\LorelaiBoutique.pdb
