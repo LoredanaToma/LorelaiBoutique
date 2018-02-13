@@ -14,11 +14,22 @@ namespace LorelaiBoutique
 
 	public partial class ClearCategorii : Form
 	{
-		MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;database=lorelai;username=root;password=");
+		String server = "localhost";
+		String database = "lorelai";
+		String uid = "root";
+		String password = "";
+		MySqlConnection connection;
+
+		String connectionString;
+		int ID = 0;
+
 
 		public ClearCategorii()
 		{
 			InitializeComponent();
+			connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+			connection = new MySqlConnection(connectionString);
+
 		}
 		public void openConnection()
 		{
@@ -77,14 +88,73 @@ namespace LorelaiBoutique
 
 		private void bdel_Click(object sender, EventArgs e)
 		{
-			string deleteQuery = "DELETE FROM categorii WHERE id_categ = " + tidcateg.Text;
-			ExecuteQuery(deleteQuery);
-			populateDGV();
-		}
+			if (ID != 0)
+			{
+				// Folosim siruri prelucrate pentru a preveni erori și pentru securitatea codului SQL
+				try
+				{
+					openConnection();
 
+					MySqlCommand command;
+
+					// Nu încadrăm @id în apostrof!
+					command = new MySqlCommand("DELETE FROM categorii WHERE id_categ = @id ;", connection);
+
+					// Atribui la @id valoarea ID care va fi înlocuită '<nr>'
+					command.Parameters.AddWithValue("@id", ID);
+
+					if (command.ExecuteNonQuery() == 1)
+					{
+						MessageBox.Show("Done!");
+					}
+
+
+					else
+					{
+						MessageBox.Show("Not Executed!");
+					}
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show(ex.Message);
+				}
+				finally
+				{
+					closeConnection();
+				}
+			}
+
+			// end if ID != 0
+			else
+				MessageBox.Show("Câmpurile sunt goale! \nSelectați un rând dând click pe coloana dinaintea cifrei!", "Nu ați selectat vreun rând", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+
+			populateDGV();
+			curataDate();
+		}
+		private void curataDate()
+		{
+			ID = 0;
+			tidcateg.Text = "";
+
+		}
+		
+		private void dataGridViewcateg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
 		private void dataGridClearcateg_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
-			
+
+		}
+
+		private void dataGridClearcateg_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+		{
+			ID = Convert.ToInt32(dataGridClearcateg.Rows[e.RowIndex].Cells[0].Value.ToString());
+			tidcateg.Text = dataGridClearcateg.Rows[e.RowIndex].Cells[1].Value.ToString();
+
 		}
 	}
 }
+
+

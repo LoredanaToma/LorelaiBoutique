@@ -13,10 +13,27 @@ namespace LorelaiBoutique
 {
 	public partial class Update_Categorii : Form
 	{
-		MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;database=lorelai;username=root;password=");
+		String server = "localhost";
+		String database = "lorelai";
+		String uid = "root";
+		String password = "";
+		MySqlConnection connection;
+
+		String connectionString;
+
+
+		int ID = 0;
+
+		
 		public Update_Categorii()
 		{
 			InitializeComponent();
+
+			connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+			connection = new MySqlConnection(connectionString);
+
+
+
 		}
 		public void openConnection()
 		{
@@ -34,31 +51,7 @@ namespace LorelaiBoutique
 			}
 		}
 
-		public void ExecuteQuery(String query)
-		{
-			try
-			{
-				openConnection();
-				MySqlCommand command;
-				command = new MySqlCommand(query, connection);
-				if (command.ExecuteNonQuery() == 1)
-				{
-					MessageBox.Show("Done!");
-				}
-				else
-				{
-					MessageBox.Show("Not Executed!");
-				}
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.Message);
-			}
-			finally
-			{
-				closeConnection();
-			}
-		}
+		
 		public void populateDGV()
 		{
 			string selectQuery = "select * from categorii";
@@ -66,21 +59,94 @@ namespace LorelaiBoutique
 			MySqlDataAdapter adapter = new MySqlDataAdapter(selectQuery, connection);
 			adapter.Fill(table);
 			dataGridViewcateg.DataSource = table;
+
 		}
 
 		private void BDone_Categ_Click(object sender, EventArgs e)
 		{
+			if (ID != 0)
+			{
+				// Folosim siruri prelucrate pentru a preveni erori și pentru securitatea codului SQL
+				try
+				{
 
-			string updateQuery = "UPDATE categorii SET categoria='" + tcateg.Text + "'   WHERE id_categ= '" + tIDcateg.Text +"'";
+					openConnection();
+
+					MySqlCommand command;
+
+
+					// Nu încadrăm @id în apostrof!
+
+					command = new MySqlCommand("UPDATE categorii SET categoria= @tcateg WHERE id_categ = @id ;", connection);
+
+					command.Parameters.AddWithValue("@id", ID);
+					command.Parameters.AddWithValue("@tcateg", tcateg.Text);
+
+					if (command.ExecuteNonQuery() == 1)
+					{
+						MessageBox.Show("Done!");
+					}
+					
+
+					else
+					{
+						MessageBox.Show("Not Executed!");
+					}
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show(ex.Message);
+				}
+				finally
+				{
+					closeConnection();
+				}
+			} 
 			
+			// end if ID != 0
+			else
+				MessageBox.Show("Câmpurile sunt goale! \nSelectați un rând dând click pe coloana dinaintea cifrei!", "Nu ați selectat vreun rând", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+		
 
-			ExecuteQuery(updateQuery);
-			populateDGV();
+			}
+
+		
+		private void curataDate()
+		{
+			ID = 0;
+			tIDcateg.Text = "";
+			tcateg.Text = "";
 		}
-
+			
 		private void Update_Categorii_Load(object sender, EventArgs e)
 		{
 			populateDGV();
+		}
+
+		private void tIDcateg_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void tcateg_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void DataGridViewcateg_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
+
+		private void dataGridViewcateg_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
+
+		private void dataGridViewcateg_RowHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
+		{
+			ID = Convert.ToInt32(dataGridViewcateg.Rows[e.RowIndex].Cells[0].Value.ToString());
+			tcateg.Text = dataGridViewcateg.Rows[e.RowIndex].Cells[1].Value.ToString();
 		}
 	}
 }

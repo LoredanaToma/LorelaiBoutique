@@ -96,7 +96,7 @@ namespace LorelaiBoutique
 			comboCateg.Items.Clear();
 			comboCateg.DataSource = categorii;
 			comboCateg.ValueMember = "categoria";
-			comboCateg.DisplayMember = "id_categ";
+			comboCateg.DisplayMember = "categoria";
 			
 			
 		}

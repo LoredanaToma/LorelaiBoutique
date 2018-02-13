@@ -54,6 +54,8 @@
 			this.dataGridViewClear.RowTemplate.Height = 24;
 			this.dataGridViewClear.Size = new System.Drawing.Size(515, 641);
 			this.dataGridViewClear.TabIndex = 18;
+			this.dataGridViewClear.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClear_CellContentClick);
+			this.dataGridViewClear.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewClear_RowHeaderMouseClick);
 			// 
 			// tid_produs
 			// 

@@ -45,6 +45,7 @@
 			this.dataGridClearcateg.Size = new System.Drawing.Size(318, 453);
 			this.dataGridClearcateg.TabIndex = 0;
 			this.dataGridClearcateg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridClearcateg_CellContentClick);
+			this.dataGridClearcateg.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridClearcateg_RowHeaderMouseClick);
 			// 
 			// bdel
 			// 

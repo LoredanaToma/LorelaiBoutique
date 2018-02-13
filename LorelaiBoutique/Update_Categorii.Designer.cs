@@ -56,6 +56,8 @@
 			this.dataGridViewcateg.RowTemplate.Height = 24;
 			this.dataGridViewcateg.Size = new System.Drawing.Size(415, 658);
 			this.dataGridViewcateg.TabIndex = 10;
+			this.dataGridViewcateg.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewcateg_CellContentClick);
+			this.dataGridViewcateg.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewcateg_RowHeaderMouseClick_1);
 			// 
 			// tcateg
 			// 

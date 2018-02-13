@@ -59,13 +59,17 @@
 			// 
 			// dataGridViewprod
 			// 
+			this.dataGridViewprod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.dataGridViewprod.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
 			this.dataGridViewprod.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewprod.Location = new System.Drawing.Point(302, 62);
 			this.dataGridViewprod.Name = "dataGridViewprod";
 			this.dataGridViewprod.RowTemplate.Height = 24;
-			this.dataGridViewprod.Size = new System.Drawing.Size(564, 612);
+			this.dataGridViewprod.Size = new System.Drawing.Size(975, 612);
 			this.dataGridViewprod.TabIndex = 18;
+			this.dataGridViewprod.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewprod_CellContentClick);
+			this.dataGridViewprod.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewprod_RowHeaderMouseClick);
 			// 
 			// tPret
 			// 
@@ -185,7 +189,7 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.ClientSize = new System.Drawing.Size(914, 795);
+			this.ClientSize = new System.Drawing.Size(1327, 795);
 			this.Controls.Add(this.tprez);
 			this.Controls.Add(this.timagMic);
 			this.Controls.Add(this.timagMare);

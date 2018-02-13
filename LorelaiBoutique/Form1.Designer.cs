@@ -51,6 +51,7 @@
 			// 
 			// label1
 			// 
+			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.label1.AutoSize = true;
 			this.label1.ForeColor = System.Drawing.Color.Crimson;
 			this.label1.Location = new System.Drawing.Point(552, 28);
@@ -61,6 +62,8 @@
 			// 
 			// linkLabel1
 			// 
+			this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.linkLabel1.AutoSize = true;
 			this.linkLabel1.Location = new System.Drawing.Point(270, 604);
 			this.linkLabel1.Name = "linkLabel1";
@@ -72,6 +75,7 @@
 			// 
 			// pictureBox1
 			// 
+			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
 			this.pictureBox1.InitialImage = null;
 			this.pictureBox1.Location = new System.Drawing.Point(543, 48);
@@ -84,6 +88,9 @@
 			// 
 			// menuStrip1
 			// 
+			this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
 			this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
@@ -92,7 +99,7 @@
             this.exitToolStripMenuItem1});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(682, 28);
+			this.menuStrip1.Size = new System.Drawing.Size(227, 28);
 			this.menuStrip1.TabIndex = 3;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -109,14 +116,14 @@
 			// categoriiToolStripMenuItem
 			// 
 			this.categoriiToolStripMenuItem.Name = "categoriiToolStripMenuItem";
-			this.categoriiToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+			this.categoriiToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
 			this.categoriiToolStripMenuItem.Text = "Categorii";
 			this.categoriiToolStripMenuItem.Click += new System.EventHandler(this.categoriiToolStripMenuItem_Click);
 			// 
 			// produseToolStripMenuItem
 			// 
 			this.produseToolStripMenuItem.Name = "produseToolStripMenuItem";
-			this.produseToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+			this.produseToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
 			this.produseToolStripMenuItem.Text = "Produse";
 			this.produseToolStripMenuItem.Click += new System.EventHandler(this.produseToolStripMenuItem_Click);
 			// 
@@ -168,6 +175,7 @@
 			// 
 			// exitToolStripMenuItem1
 			// 
+			this.exitToolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
 			this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
 			this.exitToolStripMenuItem1.Size = new System.Drawing.Size(45, 24);
 			this.exitToolStripMenuItem1.Text = "Exit";
